@@ -10,28 +10,156 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a href="#" class="nav-link active" aria-current="page">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Link</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     <div
       class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
       style="width: 280px"
     >
       <ul class="nav nav-pills flex-column mb-auto">
-        
+        <select
+          name="year-start-select"
+          id="year-start-select"
+          class="custom-select mb-2"
+        >
+          <option value="">Select Start Year</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+        </select>
+        <select
+          name="year-end-select"
+          id="year-end-select"
+          class="custom-select mb-4"
+        >
+          <option value="">Select End Year</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+        </select>
+        <select class="custom-select mb-2" name="make-select" id="make-select">
+          <option>Select Make</option>
+          <option value="BWM">BWM</option>
+          <option value="Cadillac">Cadillac</option>
+          <option value="Chevrolet">Chevrolet</option>
+          <option value="Dodge">Dodge</option>
+          <option value="Ford">Ford</option>
+          <option value="Honda">Honda</option>
+          <option value="Hyundai">Hyundai</option>
+          <option value="Jaguar">Jaguar</option>
+          <option value="Kia">Kia</option>
+          <option value="Lexus">Lexus</option>
+          <option value="Mazda">Mazda</option>
+          <option value="Nissan">Nissan</option>
+          <option value="Porsche">Porsche</option>
+          <option value="Subaru">Subaru</option>
+          <option value="Tesla">Tesla</option>
+          <option value="Toyota">Toyota</option>
+        </select>
+        <select
+          class="custom-select mb-4"
+          name="model-select"
+          id="model-select"
+        >
+          <option value="">Select Model</option>
+          <option value="5-Series">5-Series</option>
+          <option value="XT5">XT5</option>
+          <option value="Malibu">Malibu</option>
+          <option value="Challenger">Challenger</option>
+          <option value="Fusion">Fusion</option>
+          <option value="Civic">Civic</option>
+          <option value="Elantra">Elantra</option>
+          <option value="F-PACE">F-PACE</option>
+          <option value="Sorento">Sorento</option>
+          <option value="ES">ES</option>
+          <option value="CX-5">CX-5</option>
+          <option value="Altima">Altima</option>
+          <option value="Cayenne">Cayenne</option>
+          <option value="Outback">Outback</option>
+          <option value="Model-S">Model S</option>
+          <option value="Camry">Camry</option>
+          <option value="Passat">Passat</option>
+        </select>
+        <select
+          class="custom-select mb-4"
+          name="max-mileage-select"
+          id="max-mileage-select"
+        >
+          <option value="">Select Max Mileage</option>
+          <option value="70000">70,000</option>
+          <option value="60000">60,000</option>
+          <option value="50000">50,000</option>
+          <option value="40000">40,000</option>
+          <option value="30000">30,000</option>
+          <option value="20000">20,000</option>
+        </select>
+        <select
+          class="custom-select mb-2"
+          name="min-price-select"
+          id="min-price-select"
+        >
+          <option value="">Select Min Price</option>
+          <option value="10000">10,000</option>
+          <option value="15000">15,000</option>
+          <option value="20000">20,000</option>
+          <option value="25000">25,000</option>
+          <option value="30000">30,000</option>
+          <option value="35000">35,000</option>
+          <option value="40000">40,000</option>
+          <option value="45000">45,000</option>
+          <option value="50000">50,000</option>
+          <option value="55000">55,000</option>
+          <option value="60000">65,000</option>
+        </select>
+        <select
+          class="custom-select mb-4"
+          name="max-price-select"
+          id="max-price-select"
+        >
+          <option value="">Select Max Price</option>
+          <option value="10000">10,000</option>
+          <option value="15000">15,000</option>
+          <option value="20000">20,000</option>
+          <option value="25000">25,000</option>
+          <option value="30000">30,000</option>
+          <option value="35000">35,000</option>
+          <option value="40000">40,000</option>
+          <option value="45000">45,000</option>
+          <option value="50000">50,000</option>
+          <option value="55000">55,000</option>
+          <option value="60000">65,000</option>
+        </select>
+        <h5>Select Color(s)</h5>
+        <div class="mb-2 form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            name="red-select"
+            id="red-select"
+          />
+          <label class="form-check-label" for="red-select">Red</label>
+        </div>
+        <div class="mb-2 form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            name="green-select"
+            id="green-select"
+          />
+          <label class="form-check-label" for="green-select">Green</label>
+        </div>
+      </ul>
     </div>
+    <div class="cargrid px-3" id="cargrid"></div>
+    <script src="./js/app.js" type="module"></script>
   </body>
 </html>
