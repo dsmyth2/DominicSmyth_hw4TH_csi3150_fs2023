@@ -14,152 +14,89 @@
   </head>
   <body>
     <div
+      id="filter-section"
       class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
       style="width: 280px"
     >
-      <ul class="nav nav-pills flex-column mb-auto">
-        <select
-          name="year-start-select"
-          id="year-start-select"
-          class="custom-select mb-2"
-        >
-          <option value="">Select Start Year</option>
-          <option value="2014">2014</option>
-          <option value="2015">2015</option>
-          <option value="2016">2016</option>
-          <option value="2017">2017</option>
-          <option value="2018">2018</option>
-          <option value="2019">2019</option>
-          <option value="2020">2020</option>
-        </select>
-        <select
-          name="year-end-select"
-          id="year-end-select"
-          class="custom-select mb-4"
-        >
-          <option value="">Select End Year</option>
-          <option value="2014">2014</option>
-          <option value="2015">2015</option>
-          <option value="2016">2016</option>
-          <option value="2017">2017</option>
-          <option value="2018">2018</option>
-          <option value="2019">2019</option>
-          <option value="2020">2020</option>
-        </select>
-        <select class="custom-select mb-2" name="make-select" id="make-select">
-          <option>Select Make</option>
-          <option value="BWM">BWM</option>
-          <option value="Cadillac">Cadillac</option>
-          <option value="Chevrolet">Chevrolet</option>
-          <option value="Dodge">Dodge</option>
-          <option value="Ford">Ford</option>
-          <option value="Honda">Honda</option>
-          <option value="Hyundai">Hyundai</option>
-          <option value="Jaguar">Jaguar</option>
-          <option value="Kia">Kia</option>
-          <option value="Lexus">Lexus</option>
-          <option value="Mazda">Mazda</option>
-          <option value="Nissan">Nissan</option>
-          <option value="Porsche">Porsche</option>
-          <option value="Subaru">Subaru</option>
-          <option value="Tesla">Tesla</option>
-          <option value="Toyota">Toyota</option>
-        </select>
-        <select
-          class="custom-select mb-4"
-          name="model-select"
-          id="model-select"
-        >
-          <option value="">Select Model</option>
-          <option value="5-Series">5-Series</option>
-          <option value="XT5">XT5</option>
-          <option value="Malibu">Malibu</option>
-          <option value="Challenger">Challenger</option>
-          <option value="Fusion">Fusion</option>
-          <option value="Civic">Civic</option>
-          <option value="Elantra">Elantra</option>
-          <option value="F-PACE">F-PACE</option>
-          <option value="Sorento">Sorento</option>
-          <option value="ES">ES</option>
-          <option value="CX-5">CX-5</option>
-          <option value="Altima">Altima</option>
-          <option value="Cayenne">Cayenne</option>
-          <option value="Outback">Outback</option>
-          <option value="Model-S">Model S</option>
-          <option value="Camry">Camry</option>
-          <option value="Passat">Passat</option>
-        </select>
-        <select
-          class="custom-select mb-4"
-          name="max-mileage-select"
-          id="max-mileage-select"
-        >
-          <option value="">Select Max Mileage</option>
-          <option value="70000">70,000</option>
-          <option value="60000">60,000</option>
-          <option value="50000">50,000</option>
-          <option value="40000">40,000</option>
-          <option value="30000">30,000</option>
-          <option value="20000">20,000</option>
-        </select>
-        <select
-          class="custom-select mb-2"
-          name="min-price-select"
-          id="min-price-select"
-        >
-          <option value="">Select Min Price</option>
-          <option value="10000">10,000</option>
-          <option value="15000">15,000</option>
-          <option value="20000">20,000</option>
-          <option value="25000">25,000</option>
-          <option value="30000">30,000</option>
-          <option value="35000">35,000</option>
-          <option value="40000">40,000</option>
-          <option value="45000">45,000</option>
-          <option value="50000">50,000</option>
-          <option value="55000">55,000</option>
-          <option value="60000">65,000</option>
-        </select>
-        <select
-          class="custom-select mb-4"
-          name="max-price-select"
-          id="max-price-select"
-        >
-          <option value="">Select Max Price</option>
-          <option value="10000">10,000</option>
-          <option value="15000">15,000</option>
-          <option value="20000">20,000</option>
-          <option value="25000">25,000</option>
-          <option value="30000">30,000</option>
-          <option value="35000">35,000</option>
-          <option value="40000">40,000</option>
-          <option value="45000">45,000</option>
-          <option value="50000">50,000</option>
-          <option value="55000">55,000</option>
-          <option value="60000">65,000</option>
-        </select>
-        <h5>Select Color(s)</h5>
-        <div class="mb-2 form-check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            name="red-select"
-            id="red-select"
-          />
-          <label class="form-check-label" for="red-select">Red</label>
-        </div>
-        <div class="mb-2 form-check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            name="green-select"
-            id="green-select"
-          />
-          <label class="form-check-label" for="green-select">Green</label>
-        </div>
-      </ul>
+      <label for="min-year">Min. Car Year:</label>
+      <input type="number" id="min-year" min="2000" max="2023" value="2000" />
+
+      <label for="max-year">Max. Car Year:</label>
+      <input type="number" id="max-year" min="2000" max="2023" value="2023" />
+
+      <label for="make">Car Make:</label>
+      <select id="make">
+        <option value="All">All Makes</option>
+        <!-- Add options dynamically using JavaScript -->
+      </select>
+
+      <label for="max-mileage">Max. Mileage:</label>
+      <input
+        type="number"
+        id="max-mileage"
+        min="0"
+        max="100000"
+        value="100000"
+      />
+
+      <label for="max-price">Max. Price:</label>
+      <input type="number" id="max-price" min="0" max="100000" value="100000" />
+
+      <label>Car Colors:</label>
+      <div class="color-options">
+        <input
+          type="checkbox"
+          class="color-checkbox"
+          value="Silver"
+          id="color-silver"
+        />
+        <label for="color-silver">Silver</label>
+
+        <input
+          type="checkbox"
+          class="color-checkbox"
+          value="White"
+          id="color-white"
+        />
+        <label for="color-white">White</label>
+
+        <input
+          type="checkbox"
+          class="color-checkbox"
+          value="Black"
+          id="color-black"
+        />
+        <label for="color-black">Black</label>
+
+        <input
+          type="checkbox"
+          class="color-checkbox"
+          value="Red"
+          id="color-red"
+        />
+        <label for="color-red">Red</label>
+
+        <input
+          type="checkbox"
+          class="color-checkbox"
+          value="Green"
+          id="color-green"
+        />
+        <label for="color-green">Green</label>
+
+        <input
+          type="checkbox"
+          class="color-checkbox"
+          value="Blue"
+          id="color-blue"
+        />
+        <label for="color-blue">Blue</label>
+      </div>
+      <button id="reset-filters">Reset Filters</button>
     </div>
-    <div class="cargrid px-3" id="cargrid"></div>
+    <div id="car-listings">
+      <!-- Car listings go here -->
+    </div>
     <script src="./js/app.js" type="module"></script>
   </body>
 </html>
