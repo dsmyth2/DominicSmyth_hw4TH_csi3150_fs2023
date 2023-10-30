@@ -42,6 +42,12 @@ function filterCars() {
     filteredCars.forEach((car) => {
       const card = document.createElement("div");
       card.classList.add("card");
+      card.classList.add("p-3");
+      card.classList.add("m-3");
+      card.classList.add("border-3");
+      card.classList.add("border-dark");
+      card.classList.add("rounded");
+      card.classList.add("bg-light");
       // Create the card with car details
       // Add an image, year, make, model, mileage, price, etc.
       card.innerHTML = `
